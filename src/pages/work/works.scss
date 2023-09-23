@@ -37,9 +37,12 @@ img{
   font-size: 60px;
   font-family:$font-family-CenterText ;
   margin-bottom: 20px;
+  overflow: hidden;    
+  white-space: wrap;
+  text-overflow: ellipsis;
   @media screen and (max-width: 768px) {
    font-size: 35px;
-   word-wrap:normal;
+ 
                          }
  }
 }
