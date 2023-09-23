@@ -46,7 +46,7 @@ function App() {
         },
         {
           path: "/about",
-          element: <About />,
+          element: <About k/>,
         },
         
         {
@@ -56,7 +56,7 @@ function App() {
        
          
         {
-          path: "/work",
+          path: "/work/:id",
           element: <Work />,
         },
       ],

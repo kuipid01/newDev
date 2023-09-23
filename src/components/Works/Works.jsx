@@ -4,13 +4,27 @@ import "./works.scss";
 import Button from "../Button/Button";
 import { motion,AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { useRef } from "react";
-// i
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const Works = () => {
   const [screenSize, setScreenSize] = useState('medium');
-
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const {data} = await axios.get('https://devkuipid.onrender.com/project/')
+        if (data) {
+          console.log(data)
+          setProjects(data)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+fetchProjects()
+  }, [])
   useEffect(() => {
     function handleResize() {
       const width = window.innerWidth;
@@ -72,68 +86,68 @@ const Works = () => {
   const setHoverJobIndex = (id) => {
     setHoverWorksIndex(id);
   };
-  const projects = [
-    {
-      id: 1,
-      title: "Portfolio Website",
-      description:
-        "My personal portfolio website showcasing my web development work.",
-      category: "Web Development",
-      categoryId: 1,
-      categoryImage: "https://example.com/category-image-1.jpg",
-      link: "https://example.com/portfolio",
-    },
-    {
-      id: 2,
-      title: "E-commerce Website",
-      description: "An online store for selling various products.",
-      category: "Web Development",
-      categoryId: 1,
-      categoryImage:
-        "https://images.unsplash.com/photo-1673086636045-9aa873babc91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
-      link: "https://example.com/e-commerce",
-    },
-    {
-      id: 3,
-      title: "UI/UX Redesign",
-      description:
-        "A redesign of a popular app's user interface for better user experience.",
-      category: "UI/UX",
-      categoryId: 2,
-      categoryImage:
-        "https://images.unsplash.com/photo-1694240347835-99a565575138?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
-      link: "https://example.com/ui-ux-redesign",
-    },
-    {
-      id: 4,
-      title: "Branding Campaign",
-      description:
-        "A branding campaign for a new startup, including logo design and branding materials.",
-      category: "Branding/Product Design",
-      categoryId: 3,
-      categoryImage:
-        "https://images.unsplash.com/photo-1673086636045-9aa873babc91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
-      link: "https://example.com/branding-campaign",
-    },
-    {
-      id: 5,
-      title: "Branding Campaign",
-      description:
-        "A branding campaign for a new startup, including logo design and branding materials.",
-      category: "Branding/Product Design",
-      categoryId: 3,
-      categoryImage:
-        "https://images.unsplash.com/photo-1673086636045-9aa873babc91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
-      link: "https://example.com/branding-campaign",
-    },
-    // Add more projects here
-  ];
+  // const projects = [
+  //   {
+  //     id: 1,
+  //     title: "Portfolio Website",
+  //     description:
+  //       "My personal portfolio website showcasing my web development work.",
+  //     category: "Web Development",
+  //     categoryId: 1,
+  //     categoryImage: "https://example.com/category-image-1.jpg",
+  //     link: "https://example.com/portfolio",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "E-commerce Website",
+  //     description: "An online store for selling various products.",
+  //     category: "Web Development",
+  //     categoryId: 1,
+  //     categoryImage:
+  //       "https://images.unsplash.com/photo-1673086636045-9aa873babc91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+  //     link: "https://example.com/e-commerce",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "UI/UX Redesign",
+  //     description:
+  //       "A redesign of a popular app's user interface for better user experience.",
+  //     category: "UI/UX",
+  //     categoryId: 2,
+  //     categoryImage:
+  //       "https://images.unsplash.com/photo-1694240347835-99a565575138?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+  //     link: "https://example.com/ui-ux-redesign",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Branding Campaign",
+  //     description:
+  //       "A branding campaign for a new startup, including logo design and branding materials.",
+  //     category: "Branding/Product Design",
+  //     categoryId: 3,
+  //     categoryImage:
+  //       "https://images.unsplash.com/photo-1673086636045-9aa873babc91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+  //     link: "https://example.com/branding-campaign",
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Branding Campaign",
+  //     description:
+  //       "A branding campaign for a new startup, including logo design and branding materials.",
+  //     category: "Branding/Product Design",
+  //     categoryId: 3,
+  //     categoryImage:
+  //       "https://images.unsplash.com/photo-1673086636045-9aa873babc91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+  //     link: "https://example.com/branding-campaign",
+  //   },
+  //   // Add more projects here
+  // ];
 
   const branding = projects.filter(
-    (item) => item.category === "Branding/Product Design"
+    (item) => item.jobCategory === "Branding/Product Design"
   );
-  const webDev = projects.filter((item) => item.category === "Web Development");
-  const ui = projects.filter((item) => item.category === "UI/UX");
+  const webDev = projects.filter((item) => item.jobCategory === "Web Development");
+  const ui = projects.filter((item) => item.jobCategory === "UI/UX");
   const element = useRef(null)
 const {scrollYProgress} = useScroll ({
   target:element,
@@ -293,18 +307,18 @@ const {scrollYProgress} = useScroll ({
                 transition={{ duration: 0.6 }}
                 // duration={{20}}
                 onMouseLeave={() => setHoverWorksIndex(null)}
-                onMouseEnter={() => setHoverJobIndex(item.id)}
+                onMouseEnter={() => setHoverJobIndex(item._id)}
                 key={item.id}
                 className="work"
               >
                 <div
                   className={`hover ${
-                    hoverWorksIndex === item.id ? "true" : ""
+                    hoverWorksIndex === item._id ? "true" : ""
                   }`}
                 >
-                 <Link to='/work' style={{color:'white'}}> <p>Details-</p></Link>
+                 <Link to={`/work/${item?._id}`} style={{color:'white'}}> <p>Details-</p></Link>
                 </div>
-                <img src={item.categoryImage} alt="" />
+                <img src={item.projectImage} alt="" />
               </motion.div>
   ))
 }
@@ -322,18 +336,18 @@ const {scrollYProgress} = useScroll ({
                 transition={{ duration: 0.6 }}
                 // duration={{20}}
                 onMouseLeave={() => setHoverWorksIndex(null)}
-                onMouseEnter={() => setHoverJobIndex(item.id)}
-                key={item.id}
+                onMouseEnter={() => setHoverJobIndex(item._id)}
+                key={item._id}
                 className="work"
               >
                 <div
                   className={`hover ${
-                    hoverWorksIndex === item.id ? "true" : ""
+                    hoverWorksIndex === item._id ? "true" : ""
                   }`}
                 >
-                 <Link to='/work' style={{color:'white'}}> <p>Details-</p></Link>
+                 <Link to={`/work/${item?._id}`} style={{color:'white'}}> <p>Details-</p></Link>
                 </div>
-                <img src={item.categoryImage} alt="" />
+                <img src={item.projectImage} alt="" />
               </motion.div>
             ))}
           </div>

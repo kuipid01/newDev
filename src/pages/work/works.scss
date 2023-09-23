@@ -9,7 +9,7 @@
 position: relative;
 align-items: center;
 justify-content: center;
-a{
+a.back{
   text-decoration: none;
   display: block;
   position: absolute;
@@ -63,7 +63,11 @@ img{
      }
    
   }
- 
+ a{
+  text-decoration: none;
+  appearance: none;
+  color:$secondMain;
+ }
 }
 .projectText{
   line-height: 40px;
