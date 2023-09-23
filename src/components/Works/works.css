@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Langar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Licorice&display=swap");
+.WorksContainer {
+  height: 1190px;
+  background: #FFFFFF;
+  width: 100%;
+}
+.WorksContainer .headerText {
+  text-align: center;
+  font-family: "Langar", cursive;
+  font-size: 80px;
+  margin-top: 60px;
+  margin-bottom: 96px;
+}
+.WorksContainer ul.workHandles {
+  display: flex;
+  margin: auto 132px;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+.WorksContainer ul.workHandles li {
+  cursor: pointer;
+  font-size: 32px;
+  font-family: "Kaisei Opti", serif;
+}
+.WorksContainer .worksContainer {
+  width: 100%;
+  height: 708px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-top: 101px;
+}
+.WorksContainer .worksContainer .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 40px;
+  justify-content: end;
+  align-items: center;
+  width: 338px;
+}
+.WorksContainer .worksContainer .left .work {
+  width: 100%;
+  height: 312px;
+  box-shadow: -3px -1px 24px 0px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow: -3px -1px 24px 0px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: -3px -1px 24px 0px rgba(0, 0, 0, 0.56);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.WorksContainer .worksContainer .left .work img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.WorksContainer .worksContainer .center {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 464px;
+}
+.WorksContainer .worksContainer .center .centerWork {
+  box-shadow: -3px -1px 24px 0px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow: -3px -1px 24px 0px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: -3px -1px 24px 0px rgba(0, 0, 0, 0.56);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 662px;
+}
+.WorksContainer .worksContainer .center .centerWork img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.WorksContainer .worksContainer .right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  width: 343px;
+  height: 100%;
+}
+.WorksContainer .worksContainer .right .rightWork {
+  box-shadow: -3px -1px 24px 0px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow: -3px -1px 24px 0px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: -3px -1px 24px 0px rgba(0, 0, 0, 0.56);
+  height: 662px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.WorksContainer .worksContainer .right .rightWork img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.WorksContainer .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=works.css.map */

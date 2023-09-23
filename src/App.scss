@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap');
+*{
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    // overflow-x: hidden;
+    border:none;
+}
+a{
+    text-decoration: none;
+    
+}
+body{
+    width: 100%;
+    height: fit-content;
+    font-family: 'Kaisei Opti', serif;
+    overflow-x: hidden;
+}

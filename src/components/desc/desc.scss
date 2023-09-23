@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.desccontainer{
+  width: 100%;
+  height: fit-content;
+  padding: 2rem;
+  color: $accentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+margin-bottom: 4rem;
+  span{
+    text-align: center;
+    width: 70%;
+    line-height: 2;
+    font-size: 20px;
+  }
+  .aboutMe{
+    bottom: 0%;
+    right: 0%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: $offColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    a{
+      color: white;
+      width: fit-content;
+      font-weight: bolder;
+    }
+  }
+}

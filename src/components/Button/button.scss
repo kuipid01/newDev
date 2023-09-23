@@ -1,0 +1,27 @@
+@import '../../variables';
+button{
+   width: 280px;
+    min-width:200px ;
+    height: 62px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @media screen and (max-width: 768px) {
+       width: calc(280px / 1.5);
+       height:calc(62px / 1.5);
+         }
+}
+button.darkBtn{
+background-color: $darkColor;
+color: white;
+font-size: 18px;
+
+}
+button.normalBtn{
+    background-color: $bgColor;
+    color: $secondMain;
+    font-size: 18px;
+    border: solid 2px  $darkColor;
+    }
