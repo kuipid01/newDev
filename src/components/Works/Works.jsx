@@ -153,7 +153,7 @@ const {scrollYProgress} = useScroll ({
   target:element,
   offset: ["start end", "end start"]
 })
-  const x2 = useTransform(scrollYProgress, [0, 0.9], screenSize === 'mobile' ? [20, 0] : [70, 0]);
+  const x2 = useTransform(scrollYProgress, [0, 0.9], screenSize === 'mobile' ? [20, 0] : [40, 0]);
   // console.log(branding)
   const setAsPageOn = (i) => {
     console.log(selectedProject);
