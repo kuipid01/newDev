@@ -72,7 +72,8 @@ const Header = () => {
       </div>
        <div className="icons">
      <img src="/insta1.png" alt="" />
-     <img src="/twitter.png" alt="" />
+   <a href = "https://twitter.com/ChurchMosque"> <img src="/twitter.png" alt="" /> </a>
+         
      <img src="/dribble.png" alt="" />
  </div>
   <div className="btns">
