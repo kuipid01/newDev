@@ -77,7 +77,8 @@ const Header = () => {
      <img src="/dribble.png" alt="" />
  </div>
   <div className="btns">
-         <Button darkBtn={true} text={'Contact Me'}/>
+    <a href="tel:+234915701669"><Button darkBtn={true} text={'Contact Me'}/></a>
+         
          <Button darkBtn={false} text={'Portfolio'}/>
 
          </div>
