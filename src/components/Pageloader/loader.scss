@@ -10,13 +10,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    
-    .text{
-        color:white;
-        font-size: 35px;
-        text-transform: capitalize;
-        // transition:opacity .2s ease;
-    }
+
 }
 .svgLoader{
     position: absolute;
@@ -27,3 +21,30 @@
     height: 100px;
 
 }
+
+.loading{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $darkColor;
+    height: 100vh;
+  z-index: 3000;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text{
+    color:white;
+    font-size: 35px;
+    text-transform: capitalize;
+    // transition:opacity .2s ease;
+}
+    svg{
+  z-index: -1;
+      position: absolute;
+      top: 100%;
+      left: 0;
+   
+    }
+  }
