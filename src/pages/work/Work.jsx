@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { BiArrowBack } from "react-icons/bi";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import { useHistory} from "react-router-dom";
 import "./works.scss";
 
 const Work = () => {
@@ -73,7 +74,7 @@ const Work = () => {
     <AnimatePresence mode="wait">
       {project ? (
         <div ref={workRef} className="workContainer">
-          <Link className="back" to="/">
+       <Link onClick={() => history.goBack()} className="back" >
             <BiArrowBack className="backArrow" />
           </Link>
           <motion.div variants={letter} animate="enter" className="textAnim">

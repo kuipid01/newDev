@@ -2,12 +2,13 @@
 import './portfolio.scss'
 import {motion}  from 'framer-motion'
 import { BiArrowBack } from "react-icons/bi";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link ,useHistory} from "react-router-dom";
 import { useEffect,useState } from "react";
 import axios from "axios";
 const arr = [1, 2, 3, 4, 5, 6];
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
+  const history = useHistory()
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -26,7 +27,7 @@ fetchProjects()
 
 
     <div className="portfolio">
-        <Link className="back" to="/">
+        <Link onClick={() => history.goBack()} className="back" >
             <BiArrowBack className="backArrow" />
           </Link>
 <h1>All Projects</h1>
