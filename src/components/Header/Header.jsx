@@ -78,7 +78,7 @@ const Header = () => {
  </div>
   <div className="btns">
     <a href="tel:+234915701669"><Button darkBtn={true} text={'Contact Me'}/></a>
-         <a target='_blank'  rel="noreferrer" href="https://docs.google.com/document/d/1-NHdzlI1bHeW9wppO-TmtaRwenjIm8kO/edit?usp=drivesdk&ouid=109650102868349904891&rtpof=true&sd=true">  <Button darkBtn={false} text={'Portfolio'}/></a>
+         <a target='_blank'  rel="noreferrer" href="https://drive.google.com/uc?export=download&id=https://docs.google.com/document/d/1-NHdzlI1bHeW9wppO-TmtaRwenjIm8kO/edit?usp=drivesdk&ouid=109650102868349904891&rtpof=true&sd=true">  <Button darkBtn={false} text={'Portfolio'}/></a>
        
 
          </div>
