@@ -6,7 +6,7 @@ import About from "./pages/about/About";
 import Contact from "./pages/contactus/Contact";
 
 import Home from "./pages/home/Home";
-
+import { ScrollRestoration } from "react-router-dom";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -27,7 +27,7 @@ function App() {
   const Layout = () => {
     return (
       <div >
-      
+      <ScrollRestoration />
       {/* <Navbar/>   */}
            
             <Outlet />

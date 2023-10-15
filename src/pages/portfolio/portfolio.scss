@@ -4,12 +4,13 @@
     width: 100%;
 padding: 5rem 0;
 position: relative;
-a.back {
+div.back {
     text-decoration: none;
     display: block;
     position: absolute;
     left: 2rem;
     top: 2%;
+    cursor: pointer;
     @media screen and (max-width: 768px) {
   top: 1%;
   

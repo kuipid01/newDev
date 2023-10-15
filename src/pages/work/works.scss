@@ -11,13 +11,13 @@
    align-items: center;
    justify-content: center;
 
-   a.back {
+   div.back {
      text-decoration: none;
      display: block;
      position: absolute;
      left: 2rem;
      top: 3%;
-
+cursor: pointer;
      svg {
        font-size: 30px;
        color: $darkColor;
