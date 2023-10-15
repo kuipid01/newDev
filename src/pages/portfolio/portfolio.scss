@@ -1,0 +1,65 @@
+@import '../../variables';
+
+.portfolio {
+    width: 100%;
+padding: 5rem 0;
+position: relative;
+a.back {
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    left: 2rem;
+    top: 2%;
+
+    svg {
+      font-size: 35px;
+      color: $darkColor;
+    }
+  }
+h1{
+    font-size: 50px;
+margin-bottom: 3rem;
+margin-left: 2rem;
+}
+    .linksContainer {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+justify-content: center;
+a{
+    width: calc(100% / 2 - 40px);
+    
+    @media screen and (max-width: 768px) {
+       width: 100%;
+ 
+      }
+    height: 400px;
+    color: inherit;
+    .item {
+        border-radius: 10px;
+       width: 100%;
+       height: 100%;
+        display: flex;
+        border: solid 1px lightgray;
+        cursor: pointer;
+        flex-direction: column;
+        align-items: center;
+       gap: 20px;
+
+        img {
+            height: 70%;
+            width: 98%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        p{
+            font-size: 15px;
+            padding: 10px;
+        }
+    }
+}
+        
+    }
+}

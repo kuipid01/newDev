@@ -355,7 +355,10 @@ const {scrollYProgress} = useScroll ({
       )}
 
       <div  className="btn">
+        <Link to='/portfolio'>
+      
         <Button text="Check all" darkBtn={true} />
+        </Link>
       </div>
       <motion.div  style={{ height: x2 }} className='circleOuter'>
         <div className="circle">    </div>

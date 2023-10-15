@@ -76,24 +76,21 @@ const Work = () => {
           <Link className="back" to="/">
             <BiArrowBack className="backArrow" />
           </Link>
-          <motion.div variants={textSlide} animate="enter" className="textAnim">
-            {charArray.map((t) => (
-              <motion.span variants={letter} initial="initial" animate="animate" key={t}>
-                {" "}
-                {t}
-              </motion.span>
-            ))}
+          <motion.div variants={letter} animate="enter" className="textAnim">
+            {project?.projectTitle}
           </motion.div>
-
-          <motion.img
-            initial={{ width: "30%", height: "300px" }}
+<motion.div  initial={{ width: "30%", height: "300px" }}
             animate={{ width: "100%", height: "400px" }}
-            transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+            transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1], delay: 0.2 }} className="imgCont">
+<motion.img
+           
             className="projectMainImg"
             src={project.projectImage}
             alt=""
           />
 
+</motion.div>
+         
           <div className="liveSiteLink">
             <a target="_blank" rel="noreferrer" href={project.projectLink}>
               <small>Live Link</small>

@@ -16,6 +16,7 @@ import {
 } from "react-router-dom";
 import Work from "./pages/work/Work";
 import Navbar from "./components/Navbar/Navbar";
+import Portfolio from "./pages/portfolio/Portfolio";
 
 
 
@@ -53,7 +54,10 @@ function App() {
           path: "/contact",
           element: <Contact />,
         },
-       
+        {
+          path: "/portfolio",
+          element: <Portfolio />,
+        },
          
         {
           path: "/work/:id",
