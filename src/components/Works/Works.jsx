@@ -217,9 +217,9 @@ const Works = () => {
           <Button text="Check all" darkBtn={true} />
         </Link>
       </div>
-      <motion.div style={{ height: x2 }} className="circleOuter">
+      {/* <motion.div style={{ height: x2 }} className="circleOuter">
         <div className="circle"> </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

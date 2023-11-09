@@ -6,6 +6,7 @@ import Header from "../../components/Header/Header";
 import Works from "../../components/Works/Works";
 import Loader from "../../components/Pageloader/Loader";
 import { AnimatePresence, motion } from "framer-motion";
+import Profile from "../../components/Profile/Profile";
 
 const Home = () => {
   const [loading, setloading] = useState(true);
@@ -28,6 +29,7 @@ window.scrollTo(0,0)
       </AnimatePresence>
       <>
         <Header />
+        <Profile/>
         <Works />
       </>
       {/* <OverlayCircle/> */}
