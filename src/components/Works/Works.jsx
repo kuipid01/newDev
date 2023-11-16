@@ -157,10 +157,10 @@ const Works = () => {
       {recentProject ? (
         <AnimatePresence mode="wait">
           <div className="mobile">
-            {projects?.slice(0, 9).map((item) => (
+            {projects?.map((item) => (
               <motion.div
-                initial={{ y: "100px", opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                initial={{ scale: .3, opacity: 0 }}
+                animate={{ scale:1, opacity: 1 }}
                 exit={{ y: -"100px" }}
                 transition={{ duration: 0.6 }}
                 // duration={{20}}
@@ -168,16 +168,17 @@ const Works = () => {
                 onMouseEnter={() => setHoverJobIndex(item._id)}
                 key={item.id}
                 className="work">
-                <div
-                  className={`hover ${
-                    hoverWorksIndex === item._id ? "true" : ""
-                  }`}>
-                  <Link to={`/work/${item?._id}`} style={{ color: "white" }}>
-                    {" "}
-                    <p>Details-</p>
-                  </Link>
-                </div>
                 <img src={item.projectImage} alt="" />
+
+                <p className="projectText">{item?.projectDescription.substring(0,100)}</p>
+                
+                  <div className="liveSiteLink">
+                    <a target="_blank" rel="noreferrer" href={item.projectLink}>
+                      <small>Live Link</small>
+                    </a>
+                    <i></i>
+                  </div>
+               
               </motion.div>
             ))}
           </div>
@@ -187,26 +188,30 @@ const Works = () => {
           <div className="mobile">
             {selectedProject.length === 0 && <p>No Project in this category</p>}
             {selectedProject.map((item) => (
-              <Link className="work" key={item._id} to={`/work/${item?._id}`}>
+             
                 <motion.div
-                  initial={{ y: "100px", opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -"100px" }}
-                  transition={{ duration: 0.6 }}
-                  // duration={{20}}
-                  onMouseLeave={() => setHoverWorksIndex(null)}
-                  onMouseEnter={() => setHoverJobIndex(item._id)}
-                  style={{ width: "100%", height: "100%" }}>
-                  <div
-                    className={`hover ${
-                      hoverWorksIndex === item._id ? "true" : ""
-                    }`}>
-                    {" "}
-                    <p style={{ color: "white" }}>Details-</p>
+                initial={{ scale: .3, opacity: 0 }}
+                animate={{ scale:1, opacity: 1 }}
+                exit={{ y: -"100px" }}
+                transition={{ duration: 0.6 }}
+                // duration={{20}}
+                onMouseLeave={() => setHoverWorksIndex(null)}
+                onMouseEnter={() => setHoverJobIndex(item._id)}
+                key={item.id}
+                className="work">
+                <img src={item.projectImage} alt="" />
+
+                <p className="projectText">{item?.projectDescription.substring(0,100)}</p>
+                
+                  <div className="liveSiteLink">
+                    <a target="_blank" rel="noreferrer" href={item.projectLink}>
+                      <small>Live Link</small>
+                    </a>
+                    <i></i>
                   </div>
-                  <img src={item.projectImage} alt="" />
-                </motion.div>
-              </Link>
+               
+              </motion.div>
+          
             ))}
           </div>
         </AnimatePresence>

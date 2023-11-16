@@ -44,7 +44,8 @@
         align-items: start;
         justify-content: center;
         gap: 10px;
-
+        padding-left:20px;
+        
         @media screen and (max-width: 768px) {
             width: 100%;
             align-items: center;
@@ -61,7 +62,7 @@
         }
 
         p {
-            line-height: 150%;
+            line-height: 180%;
             font-weight: lighter;
             font-size: 20px;
             @media screen and (max-width: 768px) {

@@ -63,8 +63,8 @@ const Header = () => {
         </div>
       </div>
       <div className="icons">
-        <img src="/insta1.png" alt="" />
-        <a href="https://twitter.com/ChurchMosque">
+        <img src="/insta1.png" alt="" />  
+        <a href="https://twitter.com/JustKuipid">
           {" "}
           <img src="/twitter.png" alt="" />{" "}
         </a>
