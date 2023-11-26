@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import './contact.scss'
+import './contact.scss';
  import { db } from "../../firebase";
-  import { addDoc } from 'firebase/firestore';
+  import { addDoc,collection } from 'firebase/firestore';
 const Contact = () => {
     const messagesCollectionRef = collection(db, "messages");
   const [email, setEmail] = useState('');
