@@ -10,7 +10,8 @@ const Contact = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false)
-  const handleSubmit = async (e) => {
+ const [messageSent, setMessageSent] = useState(false);
+ const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !firstName || !lastName || !phoneNumber || !message) {
       alert('Please fill in all fields before submitting.');
@@ -22,6 +23,7 @@ const Contact = () => {
       const newMessage = { email, firstName, lastName,phoneNumber ,message  };
       await addDoc(messagesCollectionRef, newMessage);
       setLoading(false)
+     setMessageSent(true)
      setMessage('')
      setFirstName('')
      setEmail('')
@@ -88,7 +90,7 @@ const Contact = () => {
                   setMessage(e.target.value)
                 }  placeholder="Enter Message" name="message" id="message" ></textarea>
         <button type="submit" disabled={loading}>
-        {loading ? 'Sending...' : 'Send'}
+        {loading ? 'Sending...' : messageSent ? 'Sent' :'Send'}
       </button>
       </form>
 
