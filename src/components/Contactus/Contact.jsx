@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import './contact.scss'
- import { db } from "../../firebase";
- import { addDoc } from 'firebase/firestore';
+//  import { db } from "../../firebase";
+//  import { addDoc } from 'firebase/firestore';
 const Contact = () => {
-   const messagesCollectionRef = collection(db, "messages");
+  //  const messagesCollectionRef = collection(db, "messages");
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -41,7 +41,7 @@ const Contact = () => {
        
       </div>
       <div className="right">
-        <h1>Contact Me</h1>
+        <h1>Contact Me test</h1>
         <form onSubmit={handleSubmit} className="container">
           <div className="inputContainer">
             <div className="name">
