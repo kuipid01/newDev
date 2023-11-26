@@ -3,7 +3,7 @@
 import "./App.scss";
 import Footer from "./components/footer/Footer";
 import About from "./pages/about/About";
-import Contact from "./pages/contactus/Contact";
+
 
 import Home from "./pages/home/Home";
 import { ScrollRestoration } from "react-router-dom";
@@ -17,6 +17,7 @@ import {
 import Work from "./pages/work/Work";
 import Navbar from "./components/Navbar/Navbar";
 import Portfolio from "./pages/portfolio/Portfolio";
+import Contact from "./components/Contactus/Contact";
 
 
 
@@ -47,7 +48,7 @@ function App() {
         },
         {
           path: "/about",
-          element: <About k/>,
+          element: <About/>,
         },
         
         {

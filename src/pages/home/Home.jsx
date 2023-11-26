@@ -7,6 +7,7 @@ import Works from "../../components/Works/Works";
 import Loader from "../../components/Pageloader/Loader";
 import { AnimatePresence, motion } from "framer-motion";
 import Profile from "../../components/Profile/Profile";
+import Contact from "../../components/Contactus/Contact";
 
 const Home = () => {
   const [loading, setloading] = useState(true);
@@ -31,6 +32,7 @@ window.scrollTo(0,0)
         <Header />
         <Profile/>
         <Works />
+        <Contact/>
       </>
       {/* <OverlayCircle/> */}
     </div>
