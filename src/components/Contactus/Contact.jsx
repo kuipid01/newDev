@@ -1,14 +1,31 @@
 import React, { useState } from "react";
 import './contact.scss'
+ import { db } from "../../firebase";
+ import { addDoc } from 'firebase/firestore';
 const Contact = () => {
+   const messagesCollectionRef = collection(db, "messages");
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false)
-  const handleSubmit = async () => {
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email || !firstName || !lastName || !phoneNumber || !message) {
+      alert('Please fill in all fields before submitting.');
+      return;
+    }
+  
+    try {
+      setLoading(true)
+      const newMessage = { email, firstName, lastName,phoneNumber ,message  };
+      await addDoc(messagesCollectionRef, newMessage);
+      setLoading(false)
+    } catch (error) {
+      console.log(error)
+    }
+  
   }
   return (
     <div id="contact" className="contactContainer">
@@ -63,7 +80,9 @@ const Contact = () => {
         </div>
         
         <textarea placeholder="Enter Message" name="message" id="message" ></textarea>
-      <button type="submit"> Send</button>
+        <button type="submit" disabled={loading}>
+        {loading ? 'Sending...' : 'Send'}
+      </button>
       </form>
 
     </div>
