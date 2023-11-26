@@ -1,7 +1,14 @@
+.text{
+    text-align: center;
+
+    margin: 2rem auto 0;
+    font-family: "Langar", cursive;
+    font-size: 80px;
+}
 .imageProfile {
-    width: 80%;
+    width: 90%;
     margin: auto;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +23,7 @@
 
     .imageContainer {
         width: 50%;
-        height: 90%;
+        height: 80%;
         background: #000;
         border-radius: 20px;
         overflow: hidden;
@@ -41,7 +48,7 @@
         height: 90%;
         flex-direction: column;
         display: flex;
-        align-items: start;
+        align-items: center;
         justify-content: center;
         gap: 10px;
         padding-left:20px;

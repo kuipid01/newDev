@@ -8,24 +8,24 @@ import CurveX from "../curvex/CurveX";
 const Navbar = () => {
   const Navlinks = [
     {
-      name: "Home",
+      name: "home",
       id: 1,
       link: "/",
     },
     {
-      name: "About",
+      name: "about",
       id: 2,
-      link: "/abot",
+      link: "/about",
     },
     {
-      name: "Contact",
-      id: 2,
+      name: "contact",
+      id: 3,
       link: "/contact",
     },
 
     {
-      name: "Portfolio",
-      id: 2,
+      name: "portfolio",
+      id: 4,
       link: "/portfolio",
     },
   ];

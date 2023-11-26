@@ -135,7 +135,7 @@ const Works = () => {
     );
   };
   return (
-    <div ref={element} className="WorksContainer">
+    <div id="portfolio" ref={element} className="WorksContainer">
       <p className="headerText">Recent Works</p>
       <ul className="workHandles">
         {workHandlesArr.map((item) =>

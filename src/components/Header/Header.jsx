@@ -47,7 +47,7 @@ const Header = () => {
   };
 
   return (
-    <div className="main">
+    <div id="home" className="main">
       <div className="bgOverlayHeader"></div>
       <AnimatePresence mode="wait">{menuOpen && <Navbar />}</AnimatePresence>
 

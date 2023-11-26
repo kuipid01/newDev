@@ -4,7 +4,10 @@ import React from "react";
 import "./profile.scss";
 const Profile = () => {
   return (
-    <div className="imageProfile">
+    <>
+    <h1 id="about" className="text">About Me</h1>
+     <div className="imageProfile">
+      
       <div className="imageContainer">
         <img src="/hero.jpg" alt="" />
       </div>
@@ -18,6 +21,8 @@ const Profile = () => {
         </p>
       </div>
     </div>
+    </>
+   
   );
 };
 

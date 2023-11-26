@@ -6,16 +6,17 @@ import "./links.scss";
 import { slide } from "../../anim";
 const Links = ({ link, index }) => {
   return (
-    <motion.div
+    <motion.a
       variants={slide}
       animate="enter"
       custom={index}
       exit="exit"
       initial="initial"
       className="link"
+      href={`#${link.name}`}
     >
       {link.name}
-    </motion.div>
+    </motion.a>
   );
 };
 
