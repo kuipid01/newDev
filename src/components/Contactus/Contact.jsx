@@ -79,7 +79,9 @@ const Contact = () => {
      
         </div>
         
-        <textarea placeholder="Enter Message" name="message" id="message" ></textarea>
+        <textarea onChange={(e) =>
+                  setMessage(e.target.value)
+                }  placeholder="Enter Message" name="message" id="message" ></textarea>
         <button type="submit" disabled={loading}>
         {loading ? 'Sending...' : 'Send'}
       </button>
