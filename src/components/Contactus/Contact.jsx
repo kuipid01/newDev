@@ -22,6 +22,11 @@ const Contact = () => {
       const newMessage = { email, firstName, lastName,phoneNumber ,message  };
       await addDoc(messagesCollectionRef, newMessage);
       setLoading(false)
+     setMessage('')
+     setFirstName('')
+     setEmail('')
+      setPhoneNumber('')
+     setLastName('')
     } catch (error) {
       console.log(error)
     }
