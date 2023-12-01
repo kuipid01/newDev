@@ -49,7 +49,7 @@ const Header = () => {
   return (
     <div id="home" className="main">
       <div className="bgOverlayHeader"></div>
-      <AnimatePresence mode="wait">{menuOpen && <Navbar />}</AnimatePresence>
+      <AnimatePresence mode="wait">{menuOpen && <Navbar setMenuOpen={setMenuOpen} />}</AnimatePresence>
 
       <img src="/hompeageBg.png" />
       <div className="logo">

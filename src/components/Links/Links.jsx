@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./links.scss";
 import { slide } from "../../anim";
-const Links = ({ link, index }) => {
+const Links = ({ link, index ,setMenuOpen}) => {
   return (
     <motion.a
       variants={slide}
@@ -14,6 +14,7 @@ const Links = ({ link, index }) => {
       initial="initial"
       className="link"
       href={`#${link.name}`}
+      onClick={() => setMenuOpen(false)}
     >
       {link.name}
     </motion.a>

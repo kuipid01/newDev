@@ -5,7 +5,7 @@ import Links from "../Links/Links";
 import { motion } from "framer-motion";
 import { menuSlide } from "../../anim";
 import CurveX from "../curvex/CurveX";
-const Navbar = () => {
+const Navbar = ({setMenuOpen}) => {
   const Navlinks = [
     {
       name: "home",
@@ -39,7 +39,7 @@ const Navbar = () => {
       variants={menuSlide}
       className="sideBar">
         {Navlinks.map((link, index) => (
-          <Links key={link.id} link={link} index={index} />
+          <Links setMenuOpen={setMenuOpen} key={link.id} link={link} index={index} />
         ))}
               <CurveX/>
       </motion.nav>

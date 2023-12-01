@@ -1,10 +1,18 @@
-.text{
+@import '../../variables';
+.text {
     text-align: center;
-
-    margin: 2rem auto 0;
-    font-family: "Langar", cursive;
+    font-family: $font-family-header;
     font-size: 80px;
+    margin-top: 60px;
+    margin-bottom: 96px;
+
+    @media screen and (max-width: 768px) {
+        font-size: calc(80px / 2);
+        margin-top: 30px;
+        margin-bottom: 46px;
+    }
 }
+
 .imageProfile {
     width: 90%;
     margin: auto;

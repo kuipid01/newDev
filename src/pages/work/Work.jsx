@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { BiArrowBack } from "react-icons/bi";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "./works.scss";
 
 const Work = () => {
@@ -76,24 +76,25 @@ const Work = () => {
     <AnimatePresence mode="wait">
       {project ? (
         <div ref={workRef} className="workContainer">
-       <div onClick={handleClick} className="back" >
+          <div onClick={handleClick} className="back">
             <BiArrowBack className="backArrow" />
           </div>
           <motion.div variants={letter} animate="enter" className="textAnim">
             {project?.projectTitle}
           </motion.div>
-<motion.div  initial={{ width: "30%", height: "300px" }}
+          <motion.div
+            initial={{ width: "30%", height: "300px" }}
             animate={{ width: "100%", height: "400px" }}
-            transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1], delay: 0.2 }} className="imgCont">
-<motion.img
-           
-            className="projectMainImg"
-            src={project.projectImage}
-            alt=""
-          />
+            transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+            className="imgCont"
+          >
+            <motion.img
+              className="projectMainImg"
+              src={project.projectImage}
+              alt=""
+            />
+          </motion.div>
 
-</motion.div>
-         
           <div className="liveSiteLink">
             <a target="_blank" rel="noreferrer" href={project.projectLink}>
               <small>Live Link</small>
