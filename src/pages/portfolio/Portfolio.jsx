@@ -36,25 +36,28 @@ fetchProjects()
           </div>
 <h1>All Projects</h1>
       <div className="linksContainer">
-      {projects.revese().map((item) => (
-          <Link key={item}  to={`/work/${item?._id}`} >
-        <motion.div 
-        whileHover={{padding:'.3rem' , backgroundColor:'gray' }}
-        transition={{duration:.5,}}
-        className="item" >
-          <img
-           src={item.projectImage}
-            alt=""
-          />
-          <div className="text">
-            <p>
-            {item.projectDescription.slice(0,70)}....
-            </p>
+      {projects.reverse().map((item) => (
+  <Link key={item._id} to={`/work/${item._id}`}>
+    <motion.div 
+      whileHover={{ padding: '.3rem', backgroundColor: 'gray' }}
+      transition={{ duration: .5 }}
+      className="item"
+    >
+      <img
+        src={item.projectImage}
+        alt={item.projectDescription} // Use descriptive alt text
+      />
+      <div className="text">
+        <p>
+          {item.projectDescription.length > 70 
+            ? `${item.projectDescription.slice(0, 70)}...` 
+            : item.projectDescription}
+        </p>
+      </div>
+    </motion.div>
+  </Link>
+))}
 
-          </div>
-        </motion.div>
-        </Link>
-      ))}
       </div>
      
     </div>
