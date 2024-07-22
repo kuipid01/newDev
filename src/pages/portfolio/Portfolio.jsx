@@ -36,7 +36,7 @@ fetchProjects()
           </div>
 <h1>All Projects</h1>
       <div className="linksContainer">
-      {projects.map((item) => (
+      {projects.revese().map((item) => (
           <Link key={item}  to={`/work/${item?._id}`} >
         <motion.div 
         whileHover={{padding:'.3rem' , backgroundColor:'gray' }}
